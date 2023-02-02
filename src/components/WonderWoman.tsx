@@ -1,6 +1,6 @@
 import { urlWonderWoman } from "../server/server";
 import { useEffect, useState } from "react";
-import { Card } from "./Card";
+import { CardMovies } from "./Card";
 
 export function WonderWoman() {
   const [data, setData] = useState([]);
@@ -17,7 +17,7 @@ export function WonderWoman() {
   return (
     <section>
       <div>
-        <Card data={data} />
+        <CardMovies data={data} />
       </div>
     </section>
   );

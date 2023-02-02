@@ -1,20 +1,20 @@
 import { Props } from "../interfaces/props";
+import { Card } from "flowbite-react";
 
-export function Card({ data }: Props) {
+export function CardMovies({ data }: Props) {
   return (
     <>
       {data.map((movie, index) => {
         return (
-          <div key={index}>
-            <div>
-              <img src={movie.Poster} alt={movie.Title} />
-            </div>
-            <div>
-              <h2>{movie.Title}</h2>
-              <h3>{movie.Year}</h3>
-              <h4>{movie.Type}</h4>
-              <h5>{movie.imdbID}</h5>
-            </div>
+          <div className="max-w-sm">
+            <Card imgSrc={movie.Poster}>
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {movie.Title}
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                {movie.Type}
+              </p>
+            </Card>
           </div>
         );
       })}

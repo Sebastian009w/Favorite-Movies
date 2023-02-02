@@ -6,7 +6,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <main>
+        <main className="bg-gray-900">
           <IndexPages />
         </main>
       </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { urlSuperman } from "../server/server";
-import { Card } from "./Card";
+import { CardMovies } from "./Card";
 export function Superman() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -16,7 +16,7 @@ export function Superman() {
   return (
     <section>
       <div>
-        <Card data={data} />
+        <CardMovies data={data} />
       </div>
     </section>
   );
