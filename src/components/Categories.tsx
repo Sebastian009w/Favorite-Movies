@@ -39,7 +39,7 @@ export function Categories() {
                 : "text-white"
             }
           >
-            Batman
+            Home
           </NavLink>
 
           <NavLink
