@@ -1,19 +1,24 @@
 import { urlBatman } from "../server/server";
 import { useEffect, useState } from "react";
 import { CardMovies } from "./Card";
+import { Loader } from "./Loader";
 
 export function Batman() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const getBatman = async () => {
+    (async () => {
       const res = await fetch(urlBatman);
       const result = await res.json();
       const { Search } = result;
       setData(Search);
-    };
-
-    getBatman();
+      setLoading(false);
+    })();
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <section>
       <div>
