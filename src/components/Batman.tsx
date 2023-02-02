@@ -3,7 +3,6 @@ import { FormEvent, useEffect, useState } from "react";
 import { CardMovies } from "./Card";
 import { Loader } from "./Loader";
 
-
 export function Batman() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +22,7 @@ export function Batman() {
     return <Loader />;
   }
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!search) {
       return setError("Ingresa un texto valido porfavor");
@@ -69,6 +68,7 @@ export function Batman() {
             value={search}
           />
         </form>
+        <span>{error}</span>
       </div>
       <section>
         <div>
