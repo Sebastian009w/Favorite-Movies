@@ -6,9 +6,13 @@
 - funcionalidad
 - tecnologias usadas
 
+```    
+git clone https://github.com/Sebastian009w/Favorite-Movies.git
 ```
-    git clone https://github.com/Sebastian009w/Favorite-Movies.git
+```
+npm install
 
+npm run dev (localhost:3000)
 ```
 
 ## preambulo
