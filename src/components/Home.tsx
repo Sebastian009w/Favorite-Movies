@@ -3,7 +3,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { CardMovies } from "./Card";
 import { Loader } from "./Loader";
 
-export function Batman() {
+export function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSeach] = useState("");
