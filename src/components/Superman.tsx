@@ -4,14 +4,12 @@ import { CardMovies } from "./Card";
 export function Superman() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    const getBatman = async () => {
+    (async () => {
       const res = await fetch(urlSuperman);
       const result = await res.json();
       const { Search } = result;
       setData(Search);
-    };
-
-    getBatman();
+    })();
   }, []);
   return (
     <section>

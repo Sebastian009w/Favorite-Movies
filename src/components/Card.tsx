@@ -6,7 +6,7 @@ export function CardMovies({ data }: Props) {
     <>
       {data.map((movie, index) => {
         return (
-          <div className="max-w-sm" key={index}>
+          <div className="max-w-sm mb-10" key={index}>
             <Card imgSrc={movie.Poster}>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {movie.Title}
