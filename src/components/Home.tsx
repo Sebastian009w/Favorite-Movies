@@ -17,7 +17,7 @@ export function Home() {
       setData(Search);
       setLoading(false);
     })();
-  }, []);
+  }, [data]);
 
   if (loading) {
     return <Loader />;
